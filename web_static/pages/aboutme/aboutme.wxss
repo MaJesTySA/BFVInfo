@@ -1,0 +1,15 @@
+/**index.wxss**/
+.title{
+  font-size: 50rpx;
+  font-weight: 800;
+}
+
+.sec-title{
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.line{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx
+}

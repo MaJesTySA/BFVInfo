@@ -1,0 +1,156 @@
+<!--index.wxml-->
+<view>
+  <view class='head'>
+  <button type="primary">总览</button>
+  <button type="warn" bindtap="getWeapons">武器</button>
+  <button type="warn" bindtap="getVehicles">载具</button>
+  </view>
+  <view class="category">总览</view>
+  <view class='table'>
+    <view class='th'>平台</view>
+    <view class='td'>{{platform}}</view>
+    <view class='th'>ID</view>
+    <view class='td'>{{id}}</view>
+    <view class='th'>等级</view>
+    <view class='td'>{{details.data.overview.rank}} </view>
+    <view class='th'>kd</view>
+    <view class='td'>{{details.data.overview.kd}} </view>
+    <view class='th'>击杀</view>
+    <view class='td'>{{details.data.overview.kills}} </view>
+    <view class='th'>KPM</view>
+    <view class='td'>{{details.data.overview.kills_per_min}} </view>
+    <view class='th'>DPM</view>
+    <view class='td'>{{details.data.overview.damage_per_min}} </view>
+    <view class='th'>SPM</view>
+    <view class='td'>{{details.data.overview.score_per_min}} </view>
+    <view class='th'>命中率</view>
+    <view class='td'>{{details.data.overview.shots_accuracy}} </view>
+    <view class='th'>爆头数</view>
+    <view class='td'>{{details.data.overview.head_shots}} </view>
+    <view class='th'>最远爆头距离</view>
+    <view class='td'>{{details.data.overview.longest_hs}} </view>
+    <view class='th'>治疗</view>
+    <view class='td'>{{details.data.overview.heals}} </view>
+    <view class='th'>复活</view>
+    <view class='td'>{{details.data.overview.revives}} </view>
+    <view class='th'>补给</view>
+    <view class='td'>{{details.data.overview.resupplies}} </view>
+    <view class='th'>游玩时长</view>
+    <view class='td'>{{details.data.overview.time_played}} </view>
+    <view class='th'>胜率</view>
+    <view class='td'>{{details.data.overview.win_rate}} </view>
+  </view>
+
+  <view class="category">兵种</view>
+  <view class="sec_category">突击兵</view>
+  <view class='table'>
+    <view class='th'>突击兵等级</view>
+    <view class='td'>{{details.data.overview.assault_class_rank}}</view>
+    <view class='th'>突击兵击杀</view>
+    <view class='td'>{{details.data.overview.assault_class_kills}}</view>
+    <view class='th'>突击兵KD</view>
+    <view class='td'>{{details.data.overview.assault_class_kd}}</view>
+    <view class='th'>突击兵得分</view>
+    <view class='td'>{{details.data.overview.assault_class_score}}</view>
+    <view class='th'>突击兵KPM</view>
+    <view class='td'>{{details.data.overview.assault_class_kpm}}</view>
+    <view class='th'>突击兵SPM</view>
+    <view class='td'>{{details.data.overview.assault_class_spm}}</view>
+    <view class='th'>突击兵游玩时长</view>
+    <view class='td'>{{details.data.overview.assault_class_time}}</view>
+    <view class='th'>突击兵命中率</view>
+    <view class='td'>{{details.data.overview.assault_class_shots_acc}}</view>
+  </view>
+  <view class="sec_category">医疗兵</view>
+  <view class='table'>
+    <view class='th'>医疗兵等级</view>
+    <view class='td'>{{details.data.overview.medic_class_rank}}</view>
+    <view class='th'>医疗兵击杀</view>
+    <view class='td'>{{details.data.overview.medic_class_kills}}</view>
+    <view class='th'>医疗兵KD</view>
+    <view class='td'>{{details.data.overview.medic_class_kd}}</view>
+    <view class='th'>医疗兵得分</view>
+    <view class='td'>{{details.data.overview.medic_class_score}}</view>
+    <view class='th'>医疗兵KPM</view>
+    <view class='td'>{{details.data.overview.medic_class_kpm}}</view>
+    <view class='th'>医疗兵SPM</view>
+    <view class='td'>{{details.data.overview.medic_class_spm}}</view>
+    <view class='th'>医疗兵游玩时长</view>
+    <view class='td'>{{details.data.overview.medic_class_time}}</view>
+    <view class='th'>医疗兵命中率</view>
+    <view class='td'>{{details.data.overview.medic_class_shots_acc}}</view>
+  </view>
+  <view class="sec_category">支援兵</view>
+  <view class='table'>
+    <view class='th'>支援兵等级</view>
+    <view class='td'> {{details.data.overview.support_class_rank}}</view>
+    <view class='th'>支援兵击杀</view>
+    <view class='td'> {{details.data.overview.support_class_kills}}</view>
+    <view class='th'>支援兵KD</view>
+    <view class='td'> {{details.data.overview.support_class_kd}}</view>
+    <view class='th'>支援兵得分</view>
+    <view class='td'> {{details.data.overview.support_class_score}}</view>
+    <view class='th'>支援兵KPM</view>
+    <view class='td'> {{details.data.overview.support_class_kpm}}</view>
+    <view class='th'>支援兵SPM</view>
+    <view class='td'> {{details.data.overview.support_class_spm}}</view>
+    <view class='th'>支援兵游玩时长</view>
+    <view class='td'>{{details.data.overview.support_class_time}}</view>
+    <view class='th'>支援兵命中率</view>
+    <view class='td'>{{details.data.overview.support_class_shots_acc}}</view>
+  </view>
+  <view class="sec_category">侦查兵</view>
+  <view class='table'>
+    <view class='th'>侦查兵等级</view>
+    <view class='td'> {{details.data.overview.recon_class_rank}}</view>
+    <view class='th'>侦查兵击杀</view>
+    <view class='td'> {{details.data.overview.recon_class_kills}}</view>
+    <view class='th'>侦查兵KD</view>
+    <view class='td'>{{details.data.overview.recon_class_kd}}</view>
+    <view class='th'>侦查兵得分</view>
+    <view class='td'> {{details.data.overview.recon_class_score}}</view>
+    <view class='th'>侦查兵KPM</view>
+    <view class='td'> {{details.data.overview.recon_class_kpm}}</view>
+    <view class='th'>侦查兵SPM</view>
+    <view class='td'>{{details.data.overview.recon_class_spm}}</view>
+    <view class='th'>侦查兵游玩时长</view>
+    <view class='td'> {{details.data.overview.recon_class_time}}</view>
+    <view class='th'>侦查兵命中率</view>
+    <view class='td'>{{details.data.overview.recon_class_shots_acc}}</view>
+  </view>
+  <view class="category">载具</view>
+  <view class="sec_category">坦克</view>
+  <view class='table'>
+    <view class='th'>坦克击杀</view>
+    <view class='td'>{{details.data.overview.tank_class_kills}}</view>
+    <view class='th'>坦克得分</view>
+    <view class='td'> {{details.data.overview.tank_class_score}}</view>
+    <view class='th'>坦克KPM</view>
+    <view class='td'>{{details.data.overview.tank_class_kpm}}</view>
+    <view class='th'>坦克SPM</view>
+    <view class='td'>{{details.data.overview.tank_class_spm}}</view>
+    <view class='th'>坦克游玩时长</view>
+    <view class='td'> {{details.data.overview.tank_class_time}}</view>
+  </view>
+
+
+  <view class="sec_category">飞机</view>
+  <view class='table'>
+    <view class='th'>飞机击杀</view>
+    <view class='td'>{{details.data.overview.pilot_class_kills}}</view>
+    <view class='th'>飞机得分</view>
+    <view class='td'>{{details.data.overview.pilot_class_score}}</view>
+    <view class='th'>飞机KPM</view>
+    <view class='td'> {{details.data.overview.pilot_class_kpm}}</view>
+    <view class='th'>飞机SPM</view>
+    <view class='td'>{{details.data.overview.pilot_class_spm}}</view>
+    <view class='th'>飞机游玩时长</view>
+    <view class='td'> {{details.data.overview.pilot_class_time}}</view>
+  </view>
+
+<view class="head">
+<button bindtap="toIndex">返回首页</button>
+<button bindtap="aboutMe">关于作者</button>
+</view>
+
+</view>

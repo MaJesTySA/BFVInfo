@@ -1,0 +1,11 @@
+<view class='title'>关于本小程序</view>
+<view class="sec-title">当前版本：version 1.0.0</view>
+<text>本小程序已经在github上开源，欢迎交流。
+  问题、BUG请发邮件到 majestysacn@outlook.com
+</text>
+<view class="line"></view>
+<view class="title">关于作者</view>
+<text>前端不太会，界面没有好好做。作者主玩PS平台（PC你懂的），PSN：MaJesTy-SA-，有机会可以一起玩。
+  喜欢的话可以支持下作者，谢谢 ^ ^。
+</text>
+<image src="../../imgs/wechatpay.jpg" mode="aspectFit"></image>

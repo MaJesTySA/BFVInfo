@@ -1,0 +1,24 @@
+/**index.wxss**/
+.img {
+  text-align: center
+}
+.inputText {
+    text-align: center;
+    font-size: 50rpx;
+    margin-top:15rpx;
+    margin-bottom: 15rpx;
+    color: black;
+    block-size: 70rpx;
+    
+}
+
+.line{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx
+}
+
+.btnClass{
+   width: 80%;
+  margin-top: 25rpx;
+}
+

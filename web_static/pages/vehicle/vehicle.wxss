@@ -1,0 +1,44 @@
+.head {
+  display: flex;
+  flex-direction: row;
+}
+
+.table {
+  border: 0px solid darkgray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.category {
+  font-size: 60rpx;
+  background-color: red;
+  font-weight: 700;
+}
+
+.sec_category {
+  font-size: 50rpx;
+  background-color: rgba(255, 145, 0, 0.781);
+  font-weight: 600;
+}
+
+.td {
+  width: 60%;
+  justify-content: center;
+  background: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  font-weight: 600;
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #36f;
+  color: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  font-weight: 600;
+}

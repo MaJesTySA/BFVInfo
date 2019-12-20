@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view>
+  <view class='img'>
+    <image src="../../imgs/index.jpg" mode="scaleToFill"></image>
+  </view>
+  <view class="img">
+
+    <picker name="platForm" value="{{index}}" range="{{platform_array}}" bindchange="pickerChange">
+      <view class="inputText" wx:if="{{platform == null}}">
+        选择平台{{array[index]}}
+      </view>
+      <view class="inputText" wx:else>
+        {{platform}}
+      </view>
+    </picker> 
+
+    <form bindsubmit="getDetail">
+      <input class='inputText' name='id' placeholder="输入ID（不区分大小写）"></input>
+      <view>
+        <button class='btnClass' type="default" form-type='submit'>查询</button>
+      </view>
+    </form>
+  </view>
+  <view class="line"></view>
+  <view class="img">copyright:MaJesTySA.site</view>
+</view>
