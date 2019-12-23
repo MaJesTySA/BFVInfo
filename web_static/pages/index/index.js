@@ -8,7 +8,14 @@ Page({
     platform_array: ['origin', 'psn', 'xbox']
   },
 
-  onLoad: function() {},
+  onLoad: function(e) {
+    if (e.msg != null || e.msg != undefined){
+      wx.showToast({
+        title: '账户不存在！请重新输入',
+        icon:'none'
+      })
+    }
+  },
 
   getDetail: function(e) {
     var me = this;
