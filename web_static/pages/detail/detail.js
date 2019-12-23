@@ -26,12 +26,18 @@ Page({
           platform: me.data.platform
         },
         success: function(result) {
-          me.setData({
-            details: result
-          });
-          wx.setStorageSync('dataStorage', result);
-          wx.setStorageSync('id', me.data.id)
-          wx.setStorageSync('platform', me.data.platform)
+          if (result.data.error == '404'){
+            wx.redirectTo({
+              url: '../index/index?msg=error',
+            })
+          } else {
+            me.setData({
+              details: result
+            });
+            wx.setStorageSync('dataStorage', result);
+            wx.setStorageSync('id', me.data.id)
+            wx.setStorageSync('platform', me.data.platform)
+          } 
         }
       })
       //如果e为空，则表示已经查询过，直接从缓存中取
