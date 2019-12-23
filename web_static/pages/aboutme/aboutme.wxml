@@ -1,6 +1,7 @@
 <view class='title'>关于本小程序</view>
 <view class="sec-title">当前版本：version 1.0.0</view>
 <text>本小程序已经在github上开源，欢迎交流。
+  https://github.com/MaJesTySA/BFVInfo
   问题、BUG请发邮件到 majestysacn@outlook.com
 </text>
 <view class="line"></view>
