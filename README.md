@@ -7,11 +7,11 @@
 
 数据是从[BF Tracker](https://battlefieldtracker.com/)爬的，提取了一部分。
 
-<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/1.jpg' width=50% /></div>
+<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/1.jpg' width=30% /></div>
 
-<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/2.jpg' width=50% /></div>
+<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/2.jpg' width=30% /></div>
 
-<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/3.jpg' width=50% /></div>
+<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/3.jpg' width=30% /></div>
 
-<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/4.jpg' width=50% /></div>
+<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/4.jpg' width=30% /></div>
 
