@@ -1,5 +1,7 @@
 # BFVInfo WeChat App
-微信战地5战绩查询小程序，目前测试阶段，还未上线。
+微信战地5战绩查询小程序，目前已经上线。微信搜索`BFVInfo`或者扫码即可。
+
+<div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/bfvinfo.png' width=50% /></div>
 
 前端基于微信API，没怎么做（主要是`css`不太会）。
 
