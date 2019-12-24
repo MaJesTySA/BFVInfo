@@ -9,10 +9,17 @@ Page({
   },
 
   onLoad: function(e) {
-    if (e.msg != null || e.msg != undefined){
+    if (e.msg == '404') {
       wx.showToast({
         title: '账户不存在！请重新输入',
-        icon:'none'
+        icon: 'none',
+        duration: 2000
+      })
+    } else if (e.msg == '500') {
+      wx.showToast({
+        title: '服务器错误！请稍后重试',
+        icon: 'none',
+        duration: 2000
       })
     }
   },
@@ -20,7 +27,7 @@ Page({
   getDetail: function(e) {
     var me = this;
     var id = e.detail.value.id;
-    if ((id != null && id.length>0) && me.data.platform != null) {
+    if ((id != null && id.length > 0) && me.data.platform != null) {
       wx.redirectTo({
         url: '../detail/detail?platform=' + me.data.platform + '&id=' + id,
       })
