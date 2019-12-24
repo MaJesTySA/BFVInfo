@@ -7,7 +7,7 @@
 
 后端用的`flask`，提供了一个查询接口，仅此而已。
 
-数据是从[BF Tracker](https://battlefieldtracker.com/)爬的，提取了一部分。
+数据是从[BF Tracker](https://battlefieldtracker.com/)爬的，提取了一部分。暂时还未考虑过多请求，导致被`BF Tracker`BAN IP的情况，加入IP池的话，速度会很慢。。
 
 <div align='center'><img src='https://raw.githubusercontent.com/MaJesTySA/BFVInfo/master/imgs/1.jpg' width=30% /></div>
 
