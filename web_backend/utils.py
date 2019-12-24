@@ -8,7 +8,12 @@ vehicle_url = 'https://api.tracker.gg/api/v1/bfv/profile/{0}/{1}/vehicles'
 
 
 def get_detail(platform, id):
-    response = requests.get(overview_url.format(platform, id))
+    session = requests.session()
+    session.keep_alive = False
+    try:
+        response = requests.get(overview_url.format(platform, id))
+    except requests.exceptions.ConnectionError:
+        return json.loads('{"error":"500"}')
     if response.status_code == 404:
         return json.loads('{"error":"404"}')
     else:
