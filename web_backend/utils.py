@@ -97,8 +97,6 @@ def get_detail(platform, id):
         }
 
         all_data_dict['overview'] = required_data_dict
-        all_data_dict['weapons'] = get_weapons(platform, id)
-        all_data_dict['vehicles'] = get_vehicles(platform, id)
 
         return json.dumps(all_data_dict)
 
@@ -128,7 +126,7 @@ def get_weapons(platform, id):
         weapons_df['kills'].values[i] = int(value.replace(',', ''))
         i += 1
     sorted_weapons_df = weapons_df.sort_values(by='kills', ascending=False)
-    return sorted_weapons_df[:20].values.tolist()
+    return sorted_weapons_df[:20].to_json(orient='records')
 
 
 def get_vehicles(platform, id):
@@ -153,8 +151,9 @@ def get_vehicles(platform, id):
         vehicles_df['kills'].values[i] = int(value.replace(',', ''))
         i += 1
     sorted_vehicles_df = vehicles_df.sort_values(by='kills', ascending=False)
-    return sorted_vehicles_df[:20].values.tolist()
+    return sorted_vehicles_df[:20].to_json(orient='records')
 
 
 if __name__ == '__main__':
-    print(get_detail('origin', 'TULANGTV'))
+   # print(get_weapons('origin', 'TULANGTV'))
+   print(get_weapons('psn', 'budweiserok'))
