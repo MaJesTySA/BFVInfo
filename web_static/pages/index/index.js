@@ -15,6 +15,12 @@ Page({
         icon: 'none',
         duration: 2000
       })
+    } else if (e.msg == '400') {
+      wx.showToast({
+        title: '账户异常！无法查询！',
+        icon: 'none',
+        duration: 2000
+      })
     } else if (e.msg == '500') {
       wx.showToast({
         title: '服务器错误！请稍后重试',

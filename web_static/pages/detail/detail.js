@@ -26,22 +26,26 @@ Page({
           platform: me.data.platform
         },
         success: function(result) {
-          if (result.data.error == '404'){
+          if (result.data.error == '404') {
             wx.redirectTo({
-              url: '../index/index?msg='+result.data.error,
+              url: '../index/index?msg=' + result.data.error,
             })
-          } else if (result.data.error == '500'){
+          } else if (result.data.error == '500') {
             wx.redirectTo({
-              url: '../index/index?msg='+result.data.error,
+              url: '../index/index?msg=' + result.data.error,
             })
-          }else {
+          } else if (result.data.error == '400') {
+            wx.redirectTo({
+              url: '../index/index?msg=' + result.data.error,
+            })
+          } else {
             me.setData({
               details: result
             });
             wx.setStorageSync('dataStorage', result);
             wx.setStorageSync('id', me.data.id)
             wx.setStorageSync('platform', me.data.platform)
-          } 
+          }
         }
       })
       //如果e为空，则表示已经查询过，直接从缓存中取
