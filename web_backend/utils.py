@@ -16,6 +16,8 @@ def get_detail(platform, id):
         return json.loads('{"error":"500"}')
     if response.status_code == 404:
         return json.loads('{"error":"404"}')
+    elif response.status_code == 400:
+        return json.loads('{"error":"400"}')
     else:
         data_dict = json.loads(response.text, encoding='utf-8')
         # 调试用，避免过多请求
@@ -155,4 +157,4 @@ def get_vehicles(platform, id):
 
 
 if __name__ == '__main__':
-    print(get_detail(None, None))
+    print(get_detail('origin', 'TULANGTV'))
