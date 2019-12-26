@@ -8,18 +8,18 @@
   <view class="category">武器</view>
   <view view wx:for="{{details}}">
 
-    <view class="sec_category">{{item[1]}}</view>
+    <view class="sec_category">{{item.name}}</view>
     <view class='table'>
       <view class='th'>击杀</view>
-      <view class='td'>{{item[2]}}</view>
+      <view class='td'>{{item.kills}}</view>
       <view class='th'>KPM</view>
-      <view class='td'>{{item[3]}}</view>
+      <view class='td'>{{item.kpm}}</view>
       <view class='th'>命中率</view>
-      <view class='td'>{{item[5]}}</view>
+      <view class='td'>{{item.accuracy}}</view>
       <view class='th'>爆头</view>
-      <view class='td'>{{item[6]}}</view>
+      <view class='td'>{{item.hs}}</view>
       <view class='th'>游玩时长</view>
-      <view class='td'>{{item[4]}}</view>
+      <view class='td'>{{item.time}}</view>
     </view>
 
 

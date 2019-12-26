@@ -23,4 +23,5 @@
   </view>
   <view class="line"></view>
   <view class="img">tips：初次查询可能会比较慢，等耐心等待。</view>
+  <view class="img">查询不到可能是输错了ID，或者账号没有公开。</view>
 </view>

@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/aboutme/aboutme",
     "pages/detail/detail",
     "pages/weapon/weapon",
-    "pages/vehicle/vehicle",
-    "pages/aboutme/aboutme"
+    "pages/vehicle/vehicle"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -2,24 +2,26 @@ const app = getApp()
 
 Page({
   data: {
-    details: []
+    details: {}
   },
 
   onLoad: function(e) {
     var me = this
+    var serverUrl = app.serverUrl
     //e.id不为空，则表示从index页面传过来，需要重新查询。
     if (e.id != null || e.id != undefined) {
       me.setData({
         id: e.id,
         platform: e.platform
       })
+      wx.clearStorageSync()
       wx.showToast({
         title: '查询中。。',
-        duration: 10000,
+        duration: 5000,
         icon: 'loading'
       })
       wx.request({
-        url: 'https://app.majestysa.site/get_info',
+        url: serverUrl+'/get_info',
         method: 'GET',
         data: {
           id: me.data.id,
@@ -42,7 +44,7 @@ Page({
             me.setData({
               details: result
             });
-            wx.setStorageSync('dataStorage', result);
+            wx.setStorageSync('overview', result);
             wx.setStorageSync('id', me.data.id)
             wx.setStorageSync('platform', me.data.platform)
           }
@@ -51,11 +53,12 @@ Page({
       //如果e为空，则表示已经查询过，直接从缓存中取
     } else {
       me.setData({
-        details: wx.getStorageSync('dataStorage'),
+        details: wx.getStorageSync('overview'),
         id: wx.getStorageSync('id'),
         platform: wx.getStorageSync('platform')
       })
     }
+
   },
 
   getWeapons: function() {
@@ -81,5 +84,4 @@ Page({
       url: '../aboutme/aboutme',
     })
   }
-
 })

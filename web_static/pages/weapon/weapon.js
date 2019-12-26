@@ -2,16 +2,41 @@ const app = getApp()
 
 Page({
   data: {
-    details: []
+    details: {}
   },
 
   onLoad: function() {
     var me = this;
+    var serverUrl = app.serverUrl
     me.setData({
-      'details':wx.getStorageSync('dataStorage').data.weapons,
-      'id':wx.getStorageSync('id'),
-      'platform':wx.getStorageSync('platform')
+      id: wx.getStorageSync('id'),
+      platform: wx.getStorageSync('platform')
     })
+    if (wx.getStorageSync('weapons') == null || wx.getStorageSync('weapons') == undefined || wx.getStorageSync('weapons').length == 0) {
+      wx.showToast({
+        title: '查询中。。',
+        icon: 'none',
+        duration: 2000
+      })
+      wx.request({
+        url: serverUrl+'/get_weapons',
+        method: 'GET',
+        data: {
+          id: me.data.id,
+          platform: me.data.platform
+        },
+        success: function(result) {
+          me.setData({
+            details: result.data
+          });
+          wx.setStorageSync('weapons', result.data);
+        }
+      })
+    } else {
+      me.setData({
+        details: wx.getStorageSync('weapons')
+      });
+    }
   },
 
   getDetail: function() {

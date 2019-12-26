@@ -12,13 +12,14 @@
 
 .category {
   font-size: 60rpx;
-  background-color: red;
+  background-color: rgb(45, 92, 247);
   font-weight: 700;
+  color: white
 }
 
 .sec_category {
   font-size: 50rpx;
-  background-color: rgba(255, 145, 0, 0.781);
+  background-color: rgba(56, 109, 255, 0.781);
   font-weight: 600;
 }
 
@@ -35,8 +36,8 @@
 .th {
   width: 40%;
   justify-content: center;
-  background: #36f;
-  color: #fff;
+  background: rgb(166, 190, 255);
+  color: black;
   display: flex;
   height: 2rem;
   align-items: center;
